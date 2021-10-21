@@ -1,5 +1,8 @@
-@import '../base/_variables.scss';
+@import 'base/_variables.scss';
 
 *   {
     font-family: 'Museo Sans Cyrl', sans-serif;
+}
+p {
+    color: red;
 }
