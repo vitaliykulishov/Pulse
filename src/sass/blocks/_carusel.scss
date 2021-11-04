@@ -6,6 +6,23 @@
         margin: 0 auto;
  
     }
+    
+    // [data-controls=prev], [data-controls=next] {
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     left: -66px;
+    //     border: none;
+    //     background-color: none;
+    //     img {
+    //         width: 31px;
+    //         height: 50px;
+    //     }
+    // }
+    // [data-controls=next] {
+    //     right: -66px;
+    //     left: auto;
+    // }
     .slick-prev, .slick-next {
         position: absolute;
         top: 50%;
@@ -21,5 +38,11 @@
     .slick-next {
         right: -66px;
         left: auto;
+    }
+    .tns-item {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
