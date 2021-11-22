@@ -109,6 +109,21 @@ $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
 
   $('input[name=phone]').mask("+9 (999) 999-99-99");
   
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  new WOW().init();
 });
 
 
