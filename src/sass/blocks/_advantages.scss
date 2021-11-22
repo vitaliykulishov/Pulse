@@ -13,6 +13,10 @@
             display: block;
             margin: 0 auto;
         }
+        .heartbeat {
+            animation: heartbeat 1s ease-out alternate-reverse infinite;
+            // animation: promo__icon 1.7s linear alternate-reverse infinite;
+        }
     }
     &__subtitle {
         margin-top: 35px;
