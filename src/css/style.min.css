@@ -8,6 +8,20 @@
   margin: 0 auto;
 }
 
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  -webkit-animation: 0.2s all;
+          animation: 0.2s all;
+}
+
+.pageup i {
+  color: #C70101;
+  font-size: 40px;
+}
+
 .promo {
   min-height: 650px;
   padding: 21px 0 93px 0;
@@ -220,6 +234,10 @@
 .advantages__items img {
   display: block;
   margin: 0 auto;
+}
+
+.advantages__items .heartbeat {
+  animation: heartbeat 1s ease-out alternate-reverse infinite;
 }
 
 .advantages__subtitle {
@@ -906,6 +924,36 @@
     font-size: 20px;
     line-height: 25px;
     text-align: center;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 /*# sourceMappingURL=style.min.css.map */
