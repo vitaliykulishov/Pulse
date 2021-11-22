@@ -11,6 +11,21 @@
     margin: 0 auto;
 }
 
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    animation: 0.2s all;
+    i {
+        color: $main_color;
+        font-size: 40px;
+    }
+}
+
+
+
+
 @import 'blocks/_promo.scss';
 @import 'blocks/_header.scss';
 @import 'blocks/_buttons.scss';
@@ -24,5 +39,5 @@
 @import 'blocks/_footer.scss';
 @import 'blocks/_modals.scss';
 @import 'base/_media.scss';
-
+@import 'base/_animation.scss';
 
