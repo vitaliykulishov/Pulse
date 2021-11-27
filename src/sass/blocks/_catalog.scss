@@ -53,6 +53,7 @@
         
     }
     &-item {
+        position: relative;
         width: 303px;
         min-height: 442px;
         background: #FFFFFF;
@@ -90,7 +91,7 @@
             color: #0D0D0D;
         }
         &__link {
-            position: relative;
+            // position: relative;
             display: block;
             margin: 0 auto;
             margin-top: 10px;
@@ -100,14 +101,24 @@
             text-align: center;
             // text-decoration-line: underline;
             color: $main_color;
-            &_reverse {
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(calc(-50% - 19px));
-            }
-
         }
+        &__back {
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            // text-decoration-line: underline;
+            color: $main_color;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+        }
+
+        
         &__footer {
             display: flex;
             justify-content: space-between;

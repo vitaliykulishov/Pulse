@@ -50,6 +50,64 @@ $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
   }
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
-});
 
+  //modal
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+    
+  });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  });
+
+  // $('.button_mini').on('click', function() {
+  //   $('.overlay, #order').fadeIn('slow');
+  // });
+  $('.button_mini').each(function(i){
+    $(this).on('click', function(){
+      $('.overlay, #order').fadeIn('slow');
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+    });
+  });
+
+  function valideForms(form) {
+    $(form).validate({
+      // errorElemnt: "label",
+      errorPlacement:function (error, elemnt) {
+        error.insertBefore(elemnt);
+      },
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите своё имя",
+          minlength: jQuery.validator.format("Имя должно содержать не менее {0} символов!")
+        },
+        phone: {
+          required: "Пожалуйста, введите свой номер телефона"
+        },
+        email: {
+          required: "Нам нужен ваш электронный адрес, чтобы связаться с вами",
+          email: "Ваш электронный адрес должен быть в формате name@domain.com"
+        }
+      }
+    });
+  }
+  valideForms('#consultation form');
+  valideForms('#order form');
+  valideForms('#consultation-form');
+
+  $('input[name=phone]').mask("+9 (999) 999-99-99");
+  
+});
 
